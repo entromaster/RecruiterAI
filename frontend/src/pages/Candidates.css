@@ -1,0 +1,88 @@
+.candidates-page {
+    animation: fadeIn 0.5s ease;
+}
+
+.candidates-list {
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-100);
+    overflow: hidden;
+}
+
+.candidate-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--gray-100);
+    transition: background var(--transition-fast);
+}
+
+.candidate-row:last-child {
+    border-bottom: none;
+}
+
+.candidate-row:hover {
+    background: var(--gray-50);
+}
+
+.candidate-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(20, 184, 166, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-600);
+    flex-shrink: 0;
+}
+
+.candidate-info {
+    flex: 1;
+}
+
+.candidate-info h4 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.candidate-info p {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+}
+
+.candidate-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.candidate-time {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--gray-400);
+}
+
+.candidate-link {
+    padding: 8px;
+    border-radius: var(--radius-md);
+    color: var(--gray-400);
+    transition: all var(--transition-fast);
+}
+
+.candidate-link:hover {
+    background: var(--primary-50);
+    color: var(--primary-600);
+}
+
+.skeleton-row {
+    pointer-events: none;
+}
+
+.empty-state {
+    padding: 64px;
+}

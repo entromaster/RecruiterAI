@@ -1,0 +1,23 @@
+# Flask
+flask
+flask-cors
+
+# MongoDB
+pymongo
+
+# LinkedIn Scraper
+linkedin-scraper
+
+# Web Driver
+selenium
+webdriver-manager
+
+# LLM Providers
+openai
+google-generativeai
+
+# Utilities
+python-dotenv
+
+# Production server (optional)
+gunicorn
