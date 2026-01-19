@@ -1,0 +1,37 @@
+Please analyze the insurance policy document images and extract the following information in a structured format. Pay careful attention to these specific requirements:
+
+1. Extract and format the following fields:
+   - Extract tables all the tables from the images
+   - Merge table if it is splitted into multiple images
+   - Create the CSV format of the extracted table
+   - Append table into list if there are multiple tables in the images
+
+2. Important Instructions:
+   - Format pure CSV format.
+   - Don't add extra comments or expalanation with the output.
+   - Header should be included in the CSV output.
+   - If any value is not clearly visible or cannot be found, mark it as "Not Found"
+
+3. Please provide the output in this exact json format, do not put ``` around the json object output:
+
+[
+"NAME,FORM NUMBER,EDITION DATE\n
+Declarations Page,EX-999-TX,04/01/2009\n
+OFAC Notice,PURE-DSCGEN-001,08/01/2015\n
+Personal Excess Policy,EX-998-TX,02/01/2010\n
+Uninsured/Underinsured Liability Coverage,EX-END-GEN-001,08/01/2015\n
+Commission Disclosure Statement,EX-033-GEN,03/01/2008",
+
+"id,name,age,score\n
+1,Alice,25,85\n
+2,Bob,30,90\n
+3,Charlie,22,78\n
+4,David,28,92"
+]
+
+4. Additional Notes:
+   - Always give the result as list and csv inside the list.
+   - If you find multiple potential table then append them in the list.
+   - If a table is splitted into multiple images then merge the table as a single table and append that into list.
+
+Return only the requested information in the specified format without additional commentary.

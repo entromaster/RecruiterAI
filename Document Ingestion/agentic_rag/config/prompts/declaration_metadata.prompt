@@ -1,0 +1,30 @@
+Please analyze the insurance policy document images and extract the following information in a structured format. Pay careful attention to these specific requirements:
+
+1. Extract and format the following fields:
+   - Policy Holder Name: [Extract the full name as shown]
+   - Policy Start Date: [Format as MM/DD/YYYY]
+   - Policy End Date: [Format as MM/DD/YYYY]
+   - Declaration Number or Policy Number: [Look for this in the main body of the document, NOT in the footer]
+
+2. Important Instructions:
+   - All dates must be provided in MM/DD/YYYY format
+   - The Declaration Number should be found in the main content area of the policy document
+   - Do not confuse any footer numbers for the Declaration Number
+   - If any field is not clearly visible or cannot be found, mark it as "Not Found"
+
+3. Please provide the output in this exact json format, do not put ``` around the json object output:
+
+{
+   "holder_name": "Name",
+   "start_date": "MM/DD/YYYY",
+   "end_date": "MM/DD/YYYY",
+   "policy_number": "Number"
+}
+
+
+4. Additional Notes:
+   - If you find multiple potential values for any field, list all options and indicate which one you believe is correct and why
+   - If dates are formatted differently in the document, please convert them to the required MM/DD/YYYY format
+   - For the Policy Holder Name, include middle names/initials if present
+
+Return only the requested information in the specified format without additional commentary.

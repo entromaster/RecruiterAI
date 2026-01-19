@@ -1,0 +1,27 @@
+Please analyze the insurance policy document images and extract the policy name or policy type.
+
+1. Focus specifically on extracting the name or type of the insurance policy.
+    Examples might include:
+    - Homeowner's Insurance Policy
+    - Auto Insurance Policy
+    - Commercial General Liability Insurance
+    - Professional Liability Insurance
+    - etc.
+
+2. Instructions:
+    - Look for headings, titles, or clear indicators of the policy type
+    - Pay attention to the main document header sections
+    - The policy name is often found on the first page or in the document header
+    - If multiple policy types appear, extract the primary one
+
+3. Please provide the output in this exact format:
+```
+Policy Name: [Policy Name/Type]
+```
+
+4. If you cannot find a policy name or are uncertain, respond with:
+```
+Policy Name: Not Found
+```
+
+Return only the requested information in the specified format without additional commentary.

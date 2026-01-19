@@ -30,9 +30,9 @@ def create_app(config_class=Config):
         from extensions import get_db
         db = get_db()
         db.command("ping")
-        print("✅ Connected to MongoDB")
+        print("[OK] Connected to MongoDB")
     except Exception as e:
-        print(f"⚠️  MongoDB connection warning: {e}")
+        print(f"[WARNING] MongoDB connection warning: {e}")
     
     return app
 
@@ -44,12 +44,12 @@ if __name__ == "__main__":
     # Validate configuration
     errors = Config.validate()
     if errors:
-        print("⚠️  Configuration warnings:")
+        print("[WARNING] Configuration warnings:")
         for error in errors:
             print(f"   - {error}")
         print("\nSome features may not work without proper configuration.")
         print("See .env.example for required environment variables.\n")
     
-    print("🚀 Starting RecruiterAI Backend...")
+    print("[STARTING] RecruiterAI Backend...")
     print(f"   Available LLM providers: {Config.get_available_llm_providers()}")
     app.run(debug=Config.DEBUG, port=5000)

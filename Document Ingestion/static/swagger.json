@@ -1,0 +1,109 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Sample API",
+    "version": "1.0"
+  },
+  "host": "localhost:5000",
+  "schemes": ["http"],
+  "paths": {
+    "/extractDocumentNumber": {
+      "post": {
+        "summary": "Extract Document Number",
+        "description": "Accepts a file and extracts the document number.",
+        "consumes": ["multipart/form-data"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "file",
+            "type": "file",
+            "description": "File to extract the document number from",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful extraction of document number",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "documentNumber": {
+                  "type": "string"
+                },
+                "normalizeDocumentNumber": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request, file missing or not selected"
+          },
+          "500": {
+            "description": "Error occurred during processing"
+          }
+        }
+      }
+    },
+    "/extractFormNumber": {
+      "post": {
+        "summary": "Extract Form Number",
+        "description": "Accepts a file and extracts the form number.",
+        "consumes": ["multipart/form-data"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "file",
+            "type": "file",
+            "description": "File to extract the form number from",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful extraction of form number",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "formNumber": {
+                  "type": "string"
+                },
+                "normalizeFormNumber": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request, file missing or not selected"
+          },
+          "500": {
+            "description": "Error occurred during processing"
+          }
+        }
+      }
+    },
+    "/healthcheck": {
+      "get": {
+        "summary": "API Health Check",
+        "description": "Returns the health status of the API.",
+        "responses": {
+          "200": {
+            "description": "API is up and running",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {}
+}
